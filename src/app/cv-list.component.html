@@ -1,0 +1,9 @@
+<!-- cv-list.component.html -->
+
+<h2>Liste des CVs</h2>
+<ul class="cv-list">
+  <li *ngFor="let cv of cvs" (click)="showDetails(cv)" class="cv-item">
+    {{ cv.name }}
+  </li>
+</ul>
+<app-cv-detail *ngIf="selectedCv" [cv]="selectedCv"></app-cv-detail>

@@ -1,0 +1,12 @@
+<!-- cv-detail.component.html -->
+
+<div *ngIf="cv" class="cv-details">
+  <h2>Détails du CV</h2>
+  <p><strong>Nom:</strong> {{ cv.name }}</p>
+  <p><strong>Email:</strong> {{ cv.email }}</p>
+  <p><strong>Téléphone:</strong> {{ cv.phone }}</p>
+  <p><strong>Compétences:</strong></p>
+  <ul>
+    <li *ngFor="let skill of cv.skills">{{ skill }}</li>
+  </ul>
+</div>
